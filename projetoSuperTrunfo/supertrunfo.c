@@ -29,9 +29,9 @@ int main(){
 
 
     // Entrada de dados Carta 1
-    printf("\n\nDigite os dados da segunda carta:\n\n");
+    printf("# DIGITE OS DADOS DA PRIMEIRA CARTA:\n\n");
 
-    printf("Digite o estado: ");
+    printf("Digite o estado (A até H): ");
     scanf(" %c", &estado);
 
     codigoDaCarta[0] = estado; // O primeiro caractere do código da carta é o estado
@@ -62,7 +62,7 @@ int main(){
                                                   // a densidade demográfica é 5 habitantes/km² 10p/2km²
 
     // Entrada de dados Carta 2
-    printf("\n\nDigite os dados da segunda carta:\n\n");
+    printf("\n# DIGITE OS DADOS DA SEGUNDA CARTA:\n\n");
 
     printf("Digite o estado: ");
     scanf(" %c", &estado2);
@@ -91,16 +91,29 @@ int main(){
     pibPerCapita2 = PIB2 / populacao2; 
     densidadeDemografica2 = populacao2 / AreaPorKm22; 
 
-    // Exibição dos dados carta 1
-    printf("\nEstado: %c\n", estado);
-    printf("Código da carta: %s\n", codigoDaCarta);
-    printf("Nome da cidade: %s", nomeDaCidade); // Não precisa de \n, pois já tem no fgets
-    printf("População: %d\n", populacao);
-    printf("Número de pontos turísticos: %d\n", NumeroDePontosTuristicos);
-    printf("Área em km²: %.2f\n", AreaPorKm2);
-    printf("PIB: %.2f\n", PIB);
-    printf("Densidade demográfica: %.2f habitantes/km²\n", densidadeDemografica);
-    printf("PIB per capita: %.2f\n", pibPerCapita);
+    printf("\n# EXIBIÇÃO DOS DADOS DA CARTA 1\n\n");
 
+    // Exibição dos dados carta 1
+    printf("    Estado: %c\n", estado);
+    printf("    Código da carta: %s\n", codigoDaCarta);
+    printf("    Nome da cidade: %s", nomeDaCidade); // Não precisa de \n, pois já tem no fgets
+    printf("    População: %d\n", populacao);
+    printf("    Número de pontos turísticos: %d\n", NumeroDePontosTuristicos);
+    printf("    Área em km²: %.2f\n", AreaPorKm2);
+    printf("    PIB: %.2f\n", PIB);
+    printf("    Densidade demográfica: %.2f habitantes/km²\n", densidadeDemografica);
+    printf("    PIB per capita: %.2f\n", pibPerCapita);
+
+    printf("\n# EXIBIÇÃO DOS DADOS DA CARTA 2\n\n");
+
+    printf("    Estado: %c\n", estado2);
+    printf("    Código da carta: %s\n", codigoDaCarta2);
+    printf("    Nome da cidade: %s", nomeDaCidade2); // Não precisa de \n, pois já tem no fgets
+    printf("    População: %d\n", populacao2);
+    printf("    Número de pontos turísticos: %d\n", NumeroDePontosTuristicos2);
+    printf("    Área em km²: %.2f\n", AreaPorKm22);
+    printf("    PIB: %.2f\n", PIB2);
+    printf("    Densidade demográfica: %.2f habitantes/km²\n", densidadeDemografica2);
+    printf("    PIB per capita: %.2f\n", pibPerCapita2);
     return 0;
 }
