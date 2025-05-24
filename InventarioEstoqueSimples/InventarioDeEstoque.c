@@ -36,7 +36,7 @@ int main(){
     resultadoA = estoquea < estoqueMinimoa;
     resultadoB = estoqueb < estoqueMinimob;
 
-    // Exibir o resultado da comparação
+    // Exibir o resultado da comparação.
         /* EXPLICAÇÃO DO OPERADOR TENÁRIO: "?":
             Estrutura: condição ? se sim : se não (0 : 1)
             Se resultadoB for 1 imprime 1 (Esquerdo), se for 0 imprime "Não"(Direito)
