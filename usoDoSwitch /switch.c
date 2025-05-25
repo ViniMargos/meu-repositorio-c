@@ -21,9 +21,7 @@ int main() {
         default: // Se nenhum dos casos acima for verdadeiro
             printf("Opção inválida\n");
     }
-
-    
-    /*
+/* 
     switch (expression) // A expressão pode ser um valor inteiro, caractere ou uma expressão que resulte em um desses tipos
     {
     case constant expression: // Se a expressão for igual a constante, executa o bloco de código correspondente
@@ -33,6 +31,5 @@ int main() {
     default: // O default é opcional e é executado se nenhum dos casos acima for verdadeiro
         break;
     }
-    
-    */
+ */
 }
