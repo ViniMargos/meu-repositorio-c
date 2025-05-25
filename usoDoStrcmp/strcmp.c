@@ -6,7 +6,7 @@ int main(){
     char diferenca[10];
 
     printf("Digite ABC (Com letras maisculas): ");
-    scanf("%s", abc);
+    scanf("%s", diferenca);
 
     int diferenca = strcmp(abc, "ABC");
 
