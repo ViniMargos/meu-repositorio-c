@@ -22,15 +22,17 @@ int main() {
             printf("Opção inválida\n");
     }
 
-    // Estrutura do switch:
-
+    
+    /*
     switch (expression) // A expressão pode ser um valor inteiro, caractere ou uma expressão que resulte em um desses tipos
     {
     case constant expression: // Se a expressão for igual a constante, executa o bloco de código correspondente
-        /* code */
+        //
         break; // O break é usado para sair do switch, se não usar o break, ele continua executando os próximos casos
     
     default: // O default é opcional e é executado se nenhum dos casos acima for verdadeiro
         break;
     }
+    
+    */
 }
