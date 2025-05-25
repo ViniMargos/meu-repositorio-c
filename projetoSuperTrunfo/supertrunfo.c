@@ -14,9 +14,6 @@ int main(){
     float AreaPorKm2, AreaPorKm22;
     float PIB, PIB2;
 
-    float densidadeDemografica, densidadeDemografica2;
-    float pibPerCapita, pibPerCapita2;
-
     // Inicializando variaveis (Redundancia, mas para fins de exemplo)
     estado = 'A';
     codigoDaCarta[1] = '0'; // Inicializa o segundo caractere do código da carta como 0 (Ex: A01, A02, A03, A04)
@@ -55,12 +52,6 @@ int main(){
     printf("Digite o PIB: ");
     scanf("%f", &PIB);
 
-    //Processamento dos dados
-    pibPerCapita = PIB / populacao; // pib dividido pela população
-    densidadeDemografica = populacao / AreaPorKm2;  // Quantidade de pessoas por km² em uma ArePorkm2
-                                                   // Por exemplo, se a população for 10 e a área for 2, 
-                                                  // a densidade demográfica é 5 habitantes/km² 10p/2km²
-
     // Entrada de dados Carta 2
     printf("\n# DIGITE OS DADOS DA SEGUNDA CARTA:\n\n");
 
@@ -87,9 +78,33 @@ int main(){
     printf("Digite o PIB: ");
     scanf("%f", &PIB2);
 
-    //Processamento dos dados carta 2
-    pibPerCapita2 = PIB2 / populacao2; 
-    densidadeDemografica2 = populacao2 / AreaPorKm22; 
+    // Processamento dos dados
+
+        // Cálculo do PIB per capita e densidade demográfica
+        // PIB dividido pela população e quantidade de pessoas por km² em uma Area
+    double pibPerCapita = PIB / populacao; 
+    double pibPerCapita2 = PIB2 / populacao2; 
+
+    float densidadeDemografica = populacao / AreaPorKm2;
+    float densidadeDemografica2 = populacao2 / AreaPorKm22; 
+
+        // inverso da densidade demográfica
+        // Quanto maior a densidade demográfica, menor o superpoder
+    float inversoDensidadeDemografica = densidadeDemografica / 1;
+    float inversoDensidadeDemografica2 = densidadeDemografica2 / 1;
+
+        // comparacões das cartas (Se valor for 1, carta 1 VENCE, senão Carta 2 VENCE)
+    int comparacaoPopulacao = populacao > populacao2; 
+    int comparacaoAreaPorKm2  = AreaPorKm2 > AreaPorKm22;
+    int comparacaoPIB = PIB > PIB2;
+    int comparacaoNumeroDePontosTuristicos  = NumeroDePontosTuristicos > NumeroDePontosTuristicos2;
+    int comparacaoPibPerCapita = pibPerCapita > pibPerCapita2;
+    int comparacaoDensidadeDemografica = densidadeDemografica < densidadeDemografica2;
+
+    float superPoderCarta1 = (float) populacao + AreaPorKm2 + PIB + (float) NumeroDePontosTuristicos + pibPerCapita + inversoDensidadeDemografica;
+    float superPoderCarta2 = (float) populacao2 + AreaPorKm22 + PIB2 + (float) NumeroDePontosTuristicos2 + pibPerCapita2 + inversoDensidadeDemografica2;
+        // Comparação dos superpoderes das cartas (Qual carta é mais forte)
+    int comparacaoSuperPoderCarta1 = superPoderCarta1 > superPoderCarta2; 
 
     printf("\n# EXIBIÇÃO DOS DADOS DA CARTA 1\n\n");
 
@@ -115,5 +130,16 @@ int main(){
     printf("    PIB: %.2f\n", PIB2);
     printf("    Densidade demográfica: %.2f habitantes/km²\n", densidadeDemografica2);
     printf("    PIB per capita: %.2f\n", pibPerCapita2);
+
+    // Exibição do resultado da comparação
+    printf("\n# COMPARAÇÃO DAS CARTAS (Se valor for 1, carta 1 VENCE, senão Carta 2 VENCE):\n\n");
+    printf("    População: (%d)\n", comparacaoPopulacao);
+    printf("    Área em km²: (%d)\n", comparacaoAreaPorKm2);
+    printf("    PIB: (%d)\n", comparacaoPIB);
+    printf("    Número de pontos turísticos: (%d)\n", comparacaoNumeroDePontosTuristicos);
+    printf("    PIB per capita: (%d)\n", comparacaoPibPerCapita);
+    printf("    Densidade demográfica: (%d)\n", comparacaoDensidadeDemografica);
+    printf("    -> SUPER PODER: (%d)\n", comparacaoSuperPoderCarta1);
+
     return 0;
 }
