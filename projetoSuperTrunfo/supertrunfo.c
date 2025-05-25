@@ -2,7 +2,7 @@
 #include <string.h>
 
 int main(){
-
+/* 
     // Declaração das variaveis
     char estado, estado2;
     char codigoDaCarta[4], codigoDaCarta2[4]; 
@@ -78,18 +78,16 @@ int main(){
     printf("Digite o PIB: ");
     scanf("%f", &PIB2);
 
-    // Processamento dos dados
+    // Processamento dos dados (Calculos)
 
         // Cálculo do PIB per capita e densidade demográfica
-        // PIB dividido pela população e quantidade de pessoas por km² em uma Area
-    double pibPerCapita = PIB / populacao; 
+    double pibPerCapita = PIB / populacao;
     double pibPerCapita2 = PIB2 / populacao2; 
 
     float densidadeDemografica = populacao / AreaPorKm2;
     float densidadeDemografica2 = populacao2 / AreaPorKm22; 
 
-        // inverso da densidade demográfica
-        // Quanto maior a densidade demográfica, menor o superpoder
+        // Inverso da densidade demográfica: quanto maior a densidade demográfica, menor o superpoder
     float inversoDensidadeDemografica = densidadeDemografica / 1;
     float inversoDensidadeDemografica2 = densidadeDemografica2 / 1;
 
@@ -110,7 +108,38 @@ int main(){
 
     printf("Carta 1 - %s: %d \n", nomeDaCidade, populacao);
     printf("Carta 2 - %s: %d", nomeDaCidade2, populacao2);
-    printf("Resultado: ", comparacaoPopulacao ? "Carta 1 venceu!" : "Carta 2 venceu!");
+    printf("Resultado: %s", comparacaoPopulacao ? "Carta 1 venceu!" : "Carta 2 venceu!"); 
+    
+*/
+
+    int opcao;
+
+    printf("Menu Principal:\n");
+    printf("    1. Iniciar Jogo\n");
+    printf("    2. Instruções\n");
+    printf("    3. Sair\n");
+    printf("Escolha uma opção: ");
+    scanf("%d", &opcao);
+    getchar(); 
+
+    switch (opcao)
+    {
+    case 1:
+        printf("    Iniciando o jogo...\n");
+        break;
+    case 2:
+        printf("    Instruções do jogo:\n");
+        printf("    - O jogo consiste em comparar cartas com base em atributos.\n");
+        printf("    - Cada jogador escolhe uma carta e o jogador com o maior valor vence.\n");
+        printf("    - O jogo continua até todas as cartas sejam jogadas.\n");
+        break;
+    case 3:
+        printf("    Saindo do jogo...\n");
+        break;
+    default:
+        printf("Opção inválida. Tente novamente.\n");
+        break;
+    }
 
     return 0;
 }

@@ -8,9 +8,9 @@ int main(){
     printf("Digite ABC (Com letras maisculas): ");
     scanf("%s", diferenca);
 
-    int diferenca = strcmp(abc, "ABC");
+    int diferenca = strcmp(diferenca, "ABC");
 
-    if(strcmp(abc, "ABC") == 0){
+    if(strcmp(diferenca, "ABC") == 0){
         printf("\nOk, a diferença entre ABC e o que você DIGITOU é... zero!\n");
         printf("strcmp() retornou %d - (Zero diferenças)\n\n", diferenca);
     }
