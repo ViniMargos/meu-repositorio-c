@@ -13,12 +13,12 @@ int main(){
     char nomeDaCidade[30] = "SÃO PAULO";
     char nomeDaCidade2[30] = "RIO DE JANEIRO";
 
-    int populacao = 10;
-    int populacao2 = 10;
+    int populacao = 11450000; // 11.45 milhões
+    int populacao2 = 6211000; // 6.21 milhões
     int NumeroDePontosTuristicos = 10;
     int NumeroDePontosTuristicos2 = 5;
-    float AreaPorKm2 = 1500.5;
-    float AreaPorKm22 = 2000.75;
+    float AreaPorKm2 = 1521.5; // 1.521,5 km²
+    float AreaPorKm22 = 1200.00; // 1.200,00 km²
     float PIB = 5000000000.0;
     float PIB2 = 3000000000.0;
 
@@ -35,7 +35,6 @@ int main(){
     switch (opcao)
     {
     case 1:
-/*
         printf("\n----------------------------------\n");
         printf("    DIGITE OS DADOS DA CARTA 1:");
         printf("\n----------------------------------\n");
@@ -96,7 +95,7 @@ int main(){
 
         printf("    Digite o PIB: ");
         scanf("%f", &PIB2);  
-    */
+
         break;
     case 2:
         printf("    Instruções do jogo:\n");
@@ -162,7 +161,6 @@ int main(){
     int comparacaoSuperPoderCarta1 = superPoderCarta1 > superPoderCarta2; 
 
     // Fluxo de dados
-
     if(opcaoDoAtributoDaCarta == 1){
         printf("\n----------------------------------\n");
         printf("        RESULTADO DA RODADA");
