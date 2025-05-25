@@ -108,38 +108,9 @@ int main(){
 
     printf("\n# EXIBIÇÃO DOS DADOS DA CARTA 1\n\n");
 
-    // Exibição dos dados carta 1
-    printf("    Estado: %c\n", estado);
-    printf("    Código da carta: %s\n", codigoDaCarta);
-    printf("    Nome da cidade: %s", nomeDaCidade); // Não precisa de \n, pois já tem no fgets
-    printf("    População: %d\n", populacao);
-    printf("    Número de pontos turísticos: %d\n", NumeroDePontosTuristicos);
-    printf("    Área em km²: %.2f\n", AreaPorKm2);
-    printf("    PIB: %.2f\n", PIB);
-    printf("    Densidade demográfica: %.2f habitantes/km²\n", densidadeDemografica);
-    printf("    PIB per capita: %.2f\n", pibPerCapita);
-
-    printf("\n# EXIBIÇÃO DOS DADOS DA CARTA 2\n\n");
-
-    printf("    Estado: %c\n", estado2);
-    printf("    Código da carta: %s\n", codigoDaCarta2);
-    printf("    Nome da cidade: %s", nomeDaCidade2); // Não precisa de \n, pois já tem no fgets
-    printf("    População: %d\n", populacao2);
-    printf("    Número de pontos turísticos: %d\n", NumeroDePontosTuristicos2);
-    printf("    Área em km²: %.2f\n", AreaPorKm22);
-    printf("    PIB: %.2f\n", PIB2);
-    printf("    Densidade demográfica: %.2f habitantes/km²\n", densidadeDemografica2);
-    printf("    PIB per capita: %.2f\n", pibPerCapita2);
-
-    // Exibição do resultado da comparação
-    printf("\n# COMPARAÇÃO DAS CARTAS (Se valor for 1, carta 1 VENCE, senão Carta 2 VENCE):\n\n");
-    printf("    População: (%d)\n", comparacaoPopulacao);
-    printf("    Área em km²: (%d)\n", comparacaoAreaPorKm2);
-    printf("    PIB: (%d)\n", comparacaoPIB);
-    printf("    Número de pontos turísticos: (%d)\n", comparacaoNumeroDePontosTuristicos);
-    printf("    PIB per capita: (%d)\n", comparacaoPibPerCapita);
-    printf("    Densidade demográfica: (%d)\n", comparacaoDensidadeDemografica);
-    printf("    -> SUPER PODER: (%d)\n", comparacaoSuperPoderCarta1);
+    printf("Carta 1 - %s: %d \n", nomeDaCidade, populacao);
+    printf("Carta 2 - %s: %d", nomeDaCidade2, populacao2);
+    printf("Resultado: ", comparacaoPopulacao ? "Carta 1 venceu!" : "Carta 2 venceu!");
 
     return 0;
 }
