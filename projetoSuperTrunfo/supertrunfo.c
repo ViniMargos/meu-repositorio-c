@@ -122,7 +122,7 @@ int main(){
             printf("    2. Número de pontos turísticos\n");
             printf("    3. PIB\n");
             printf("    4. PIB per capita\n");
-            printf("    5. Densidade demográfica\n");
+            printf("    5. Densidade demográfica\n\n");
             printf("Escolha uma opção: ");
             scanf("%d", &opcaoDoAtributoDaCarta);
             break;
